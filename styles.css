@@ -1,0 +1,424 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+
+
+
+/*
+=============== 
+Global Styles
+===============
+*/
+html {
+  scroll-behavior: smooth;
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+
+background-image: url(back.gif);
+background-size: cover;
+  color: #ffffffe8;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+/* section */
+.section {
+  padding-bottom: 5rem;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+/*
+=============== 
+Scroll
+===============
+*/
+/* navbar */
+nav {
+  background: var(--clr-white);
+  padding: 1rem 1.5rem;
+}
+/* fixed nav */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--clr-white);
+  box-shadow: var(--light-shadow);
+}
+.fixed-nav .links a {
+  color: var(--clr-grey-1);
+}
+.fixed-nav .links a:hover {
+  color: var(--clr-secondary);
+}
+/* .fixed-nav .links-container {
+  height: auto !important;
+} */
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--clr-grey-1);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: var(--clr-secondary);
+}
+
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.show-links {
+  height: 200px;
+}
+.links a {
+  background: var(--clr-white);
+  color: var(--clr-grey-5);
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  transition: var(--transition);
+  font-weight: bold;
+  padding: 0.75rem 0;
+}
+.links a:hover {
+  color: var(--clr-grey-1);
+}
+@media screen and (min-width: 800px) {
+  nav {
+    background: transparent;
+  }
+  .nav-center {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links-container {
+    height: auto !important;
+  }
+  .links {
+    display: flex;
+  }
+  .links a {
+    background: transparent;
+    color: var(--clr-white);
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    transition: var(--transition);
+    margin: 0 1rem;
+    font-weight: bold;
+    padding: 0;
+  }
+  .links a:hover {
+    color: var(--clr-white);
+  }
+}
+/* hero */
+header {
+  min-height: 100vh;
+  background: url(hero.gif) center/cover no-repeat;
+}
+.banner {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.container h1 {
+  color: var(--clr-white);
+  text-transform: uppercase;
+}
+.container p {
+  color: var(--clr-white);
+  max-width: 25rem;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .container p {
+    max-width: 40rem;
+  }
+}
+/* sections and title */
+.title h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.title span {
+  color: var(--clr-secondary);
+}
+#about{
+  margin: 0 auto;
+  padding: 3em;
+}
+.about-content{
+  display: flex;
+}
+
+img{
+  border-radius: 15%;
+  margin-left: 7em;
+  padding: 1em;
+}
+.img{
+  width: 390px;
+  height: 470px;
+}
+.about-text{
+  width: 550px;
+padding: 1em;
+margin-left: 4em;
+}
+/*Footer*/
+footer {
+  background-color: rgb(0, 0, 0);
+  color: pink;
+  font-weight: 300;
+  text-align: center;
+  padding: 0.4em;
+}
+
+.top-link {
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: var(--clr-secondary);
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  color: var(--clr-white);
+  animation: bounce 2s ease-in-out infinite;
+  visibility: hidden;
+  z-index: -100;
+}
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#projectBtn{
+  padding: 10px 22px;
+  background-color: pink;
+  color: rgb(48, 45, 45);
+  font-weight: 900;
+  cursor: pointer;
+  border-radius: 27%;
+}
+
+button {
+  margin: 0.5em;
+  margin-left: 19.9em;
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: rgb(48, 45, 45);
+  font-weight: 900;
+  cursor: pointer;
+  background-color: pink;
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+button:before,
+button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #e82aaf 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #e82aaf 20%, transparent 30%),
+    radial-gradient(circle,#e82aaf 20%, transparent 20%),
+    radial-gradient(circle, #e82aaf 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #e82aaf 15%, transparent 20%),
+    radial-gradient(circle, #e82aaf 20%, transparent 20%),
+    radial-gradient(circle, #e82aaf 20%, transparent 20%),
+    radial-gradient(circle, #e82aaf 20%, transparent 20%),
+    radial-gradient(circle, #e82aaf 20%, transparent 20%);
+  background-size: 70% 10%, 20% 70%, 15% 75%, 20% 20%, 18% 78%, 70% 70%, 15% 15%,
+    70% 70%, 78% 18%;
+  background-position: 70% 120%;
+  animation: greentopBubbles 0.7s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 70%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 60% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 70%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, yellow 20%, transparent 20%),
+    radial-gradient(circle, yellow 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, yellow 15%, transparent 20%),
+    radial-gradient(circle, yellow 20%, transparent 20%),
+    radial-gradient(circle, #e82aaf 20%, transparent 20%),
+    radial-gradient(circle, #e82aaf 20%, transparent 20%),
+    radial-gradient(circle, #e82aaf 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.8s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 80% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
